@@ -8,7 +8,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public")); 
 
-const PORT = process.env.PORT || 5503; 
+const PORT = process.env.PORT || 5500; 
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html"); 
