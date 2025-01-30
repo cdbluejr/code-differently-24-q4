@@ -23,24 +23,32 @@
         </div>
     </header>
      <div class="CustomerInfo">
-        <h2>How to connect with you</h2>
-        <form action="/custinfo" method="POST">
-            <label for="CompleteName">Full Name</label>
-            <div class="input-group">
-                <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
-                <input type="text" id="middle-intial" name="middle-intial" placeholder="Middle Initial">
-                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
-                <input type="text" id="suffix" name="suffix" placeholder="Suffix">
-            </div>
+         <h2>Submit Your Information</h2>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+  <!-- used chatgpt to update this section -->
 
-            <label for="additional-info">Additional Information</label>
-            <textarea id="information" name="information" class="information" rows="6" placeholder="Information?" required></textarea>
+  
+  <form action="/submit" method="POST"> 
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br><br>
 
-            <button type="submit">Send</button>
-        </form>
+    <label for="middleInitial">Middle Initial:</label>
+    <input type="text" id="middleInitial" name="middleInitial"><br><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br><br>
+
+    <label for="suffix">Suffix (e.g., Jr., Sr., III):</label>
+    <input type="text" id="suffix" name="suffix"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="information">Additional Information:</label>
+    <textarea id="information" name="information"></textarea><br><br>
+
+    <button type="submit">Send</button>
+  </form>
     </div>
 </body>
     <footer class="footer">
