@@ -8,11 +8,12 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
 
-app.get("/", cors(), async(req, res) => {
+app.get("/", async(req, res) => {
     res.send("this is working")
 })
 
-app.post('/submit', (req, res) => {
+app.post('http://127.0.0.1:5502/submit', (req, res) => {
+  console.log(req.body);  // This will show the data sent in the form
   const { firstName, middleInitial, lastName, suffix, email, information } = req.body;
 
   // Render the same form, but also display the submitted information
@@ -26,6 +27,7 @@ app.post('/submit', (req, res) => {
   `);
 });
 
-app.listen(port, () => {
+app.listen(5500, () => {
+    console.log(`Server is running on port ${port}`);
     console.log('Did this really work?')
 })
